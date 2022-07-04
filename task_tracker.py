@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import typer
 from rich.console import Console
 from rich.table import Table
@@ -9,32 +10,32 @@ console = Console()
 app = typer.Typer()
 
 
-@app.command(short_help='adds an item')
+@app.command(short_help='adds a task')
 def add(task: str, category: str):
     typer.echo(f"adding {task}, {category}")
     todo = Todo(task, category)
     insert_todo(todo)
     show()
 
-@app.command()
+@app.command(short_help='delete a task')
 def delete(position: int):
     typer.echo(f"deleting {position}")
     delete_todo(position-1)
     show()
 
-@app.command()
+@app.command(short_help='update a task')
 def update(position: int, task: str = None, category: str = None):
     typer.echo(f"updating {position}")
     update_todo(position-1, task, category)
     show()
 
-@app.command()
+@app.command(short_help='mark a task as completed')
 def complete(position: int):
     typer.echo(f"complete {position}")
     complete_todo(position-1)
     show()
 
-@app.command()
+@app.command(short_help='show all tasks')
 def show():
     tasks = get_all_todos()
     console.print("[bold white]Todos[/bold white]!", "💻")
