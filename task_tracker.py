@@ -58,7 +58,7 @@ def display_board(board_id):
         print(f"Task: {task.key}, Assignee: {assignee}, Summary: {task.fields.summary}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Jira Task Manager")
+    parser = argparse.ArgumentParser(description="Task Tracker")
     parser.add_argument("-m", "--comment", nargs=2, metavar=("TASK_KEY", "COMMENT"), help="Write a comment on a task")
     parser.add_argument("-n", "--newtask", nargs=3, metavar=("SUMMARY", "DESCRIPTION", "ISSUE_TYPE"), help="Create a new task on a board")
     parser.add_argument("-l", "--listtasks", metavar="BOARD_ID", help="List tasks on a board")

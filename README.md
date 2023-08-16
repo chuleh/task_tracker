@@ -1,4 +1,4 @@
-# Jira Task Manager
+# Jira Task tracker
 
 ## Overview
 
@@ -36,12 +36,12 @@ Create a .env file in the same directory as the script. Add your Jira credential
 ## Make the Script Executable
 
    ```bash
-    chmod +x jira_task_manager.py
+    chmod +x task_tracker.py
    ```
 
 ## Optional: Create Symbolic Link (macOS/Linux)
   ```bash
-  ln -s /path/to/jira_task_manager.py /usr/local/bin/jira-task-manager
+  ln -s /path/to/task_tracker.py /usr/local/bin/task_tracker
   ```
 ## Usage
 
